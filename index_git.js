@@ -1,4 +1,5 @@
 
+
 const express = require('express')
 const cors = require('cors')
 
@@ -92,6 +93,23 @@ app.put('/api/notes/:id', (request, response) => {
       response.status(404).end()
   }
 })
+
+
+//app.put('/api/notes/:id'', (request, response) => {
+//  const id = Number(request.params.id)
+//  const body = request.body
+//  if (!body.content) {
+//    return response.status(400).json({error: 'content missing'})
+//  }
+//
+//  const note = {
+//    content: body.content,
+//    important: body.important || false,
+//    id: generateId(),
+//  }
+//  notes = notes.concat(note)
+//  response.json(note)
+//})
 
 
 const PORT = process.env.PORT || 3001
